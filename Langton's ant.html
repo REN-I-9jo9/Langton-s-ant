@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Langton's ant</title>
+		<link href="Langton's ant.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="canvas">
+				<canvas></canvas>
+			</div>
+			<div class="count">Start</div>
+			<div id=rules class="rules">
+				<div id=add class="colors">
+					<div class=block onclick=addrule(this.parentElement.parentElement)>+</div>
+					<div class=block onclick=changedir(this.parentElement)>&#8593;</div>
+					<div style="display:none;">0</div>
+					<div class=block>2</div>
+				</div>
+				<div id=_1 class="colors">
+					<div class=block style="background-color:rgb(255,255,255);"></div>
+					<div style="display:none;">3</div>
+					<div class=block onclick=arrowchange(this.parentElement)>&#8630;</div>
+				</div>
+				<div id=_2 class="colors">
+					<div class=block style="background-color:rgb(0,0,0);" onclick=colorchange(this)></div>
+					<div style="display:none;">1</div>
+					<div class=block onclick=arrowchange(this.parentElement)>&#8631;</div>
+					<div class=block style="float:right; margin-right:0px;" onclick=delrule(this.parentElement)>-</div>
+				</div>
+			</div>
+		</div>
+		<div id=zero style="display none"></div>
+		<script type="text/javascript" src="Langton's ant.js"></script>
+	</body>
+	
+</html>

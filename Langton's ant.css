@@ -1,0 +1,57 @@
+:root{
+	--canvas:800;
+}
+canvas{
+	height:var(--canvas);
+	width:var(--canvas);
+}
+.container {
+	height:800px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: [start] 802px [line1] auto [end];
+	grid-template-rows: [start] 100px [line1] auto [end];
+}
+.canvas{
+	grid-column: start / line1;
+	grid-row: start / end;
+	
+	border:1px solid;
+}
+.count{
+	grid-column: line1 / end;
+	grid-row: start / line1;
+	
+	border:1px solid;
+	text-align: center;
+	line-height: 100px;
+}
+.rules{
+	grid-column: line1 / end;
+	grid-row: line1 / end;
+	
+	height:auto;
+	border:1px solid;
+	padding:10px 10px 0px 10px;
+	overflow-y:scroll;
+}
+.colors{
+	border:1px solid;
+	width: -webkit-fill-available;
+	height:78px;
+	background-color:white;
+	padding:10px;
+	margin-bottom:10px;
+	text-align: center;
+	line-height: 100px;
+	}
+.block{float:left;
+	border:1px solid;
+	width: 76px;
+	height: -webkit-fill-available;
+	background-color:white;
+	margin-right:10px;
+	line-height: 76px;
+	font-family: Monospace;
+	font-size: 30px;
+}
